@@ -1,0 +1,111 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f0;
+    color: #3e543e;
+    text-align: center;
+}
+header {
+    background-color: #3e543e;
+    color: #ffffff;
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.logo img {
+    height: 50px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #b5c7b5;
+}
+.hero {
+    margin-top: 80px;
+    padding: 120px 20px;
+    background-color: #6c8c6c;
+    color: white;
+}
+.hero h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+.hero p {
+    font-size: 22px;
+    margin: 20px 0;
+}
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4f6f4f;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.cta-button:hover {
+    background-color: #3e543e;
+    transform: scale(1.05);
+}
+.content-section {
+    padding: 80px 50px;
+    color: #3e543e;
+    background-color: #ffffff;
+}
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.content-section img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonial {
+    background-color: #e8f5e9;
+    padding: 60px;
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.testimonial blockquote {
+    font-size: 20px;
+    font-style: italic;
+    color: #3e543e;
+}
+footer {
+    background-color: #3e543e;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
