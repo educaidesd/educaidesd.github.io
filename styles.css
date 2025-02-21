@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -46,12 +47,6 @@ nav ul li a:hover {
     padding: 120px 20px;
     background-color: #6c8c6c;
     color: white;
-    height: 100vh; /* Full height of the viewport */
-    width: 100%; /* Full width */
-    background-size: cover; /* Ensure the image covers the div */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent tiling */
-}
 }
 .hero h1 {
     font-size: 48px;
