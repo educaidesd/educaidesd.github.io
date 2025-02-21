@@ -6,6 +6,7 @@ body {
     color: #3e543e;
     text-align: center;
 }
+
 header {
     background-color: #3e543e;
     color: #ffffff;
@@ -19,18 +20,22 @@ header {
     align-items: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .logo img {
     height: 50px;
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
     gap: 20px;
 }
+
 nav ul li {
     display: inline;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -38,23 +43,31 @@ nav ul li a {
     font-size: 18px;
     transition: color 0.3s;
 }
+
 nav ul li a:hover {
     color: #b5c7b5;
 }
+
 .hero {
     margin-top: 80px;
     padding: 120px 20px;
-    background-color: #6c8c6c;
+    background-image: url('background.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Adds text shadow for better readability */
 }
+
 .hero h1 {
     font-size: 48px;
     font-weight: 600;
 }
+
 .hero p {
     font-size: 22px;
     margin: 20px 0;
 }
+
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
@@ -66,15 +79,18 @@ nav ul li a:hover {
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
 }
+
 .cta-button:hover {
     background-color: #3e543e;
     transform: scale(1.05);
 }
+
 .content-section {
     padding: 80px 50px;
     color: #3e543e;
     background-color: #ffffff;
 }
+
 .service-item {
     display: flex;
     align-items: center;
@@ -84,6 +100,7 @@ nav ul li a:hover {
     font-weight: 600;
     margin: 10px 0;
 }
+
 .content-section img {
     width: 80%;
     max-width: 600px;
@@ -91,6 +108,7 @@ nav ul li a:hover {
     margin-top: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .testimonial {
     background-color: #e8f5e9;
     padding: 60px;
@@ -98,11 +116,13 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 .testimonial blockquote {
     font-size: 20px;
     font-style: italic;
     color: #3e543e;
 }
+
 footer {
     background-color: #3e543e;
     color: white;
@@ -110,12 +130,12 @@ footer {
     margin-top: 40px;
 }
 
+/* Fade-in Effect */
 .fade-element {
-    opacity: 0;  /* Start as invisible */
-    transition: opacity 1s ease-in-out;  /* Fade in effect */
+    opacity: 0;  /* Initially invisible */
+    transition: opacity 1s ease-in-out;  /* Smooth transition */
 }
 
 .fade-in {
-    opacity: 1;  /* Fully visible after fading */
+    opacity: 1;  /* Fully visible when class is added */
 }
-
