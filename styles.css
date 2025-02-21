@@ -109,3 +109,13 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+
+.fade-element {
+    opacity: 0;  /* Start as invisible */
+    transition: opacity 1s ease-in-out;  /* Fade in effect */
+}
+
+.fade-in {
+    opacity: 1;  /* Fully visible after fading */
+}
+
