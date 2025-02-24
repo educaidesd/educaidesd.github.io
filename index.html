@@ -13,6 +13,7 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            position: relative;
         }
         .mission-image {
             width: 40%;
@@ -20,11 +21,37 @@
         }
         .mission-text {
             width: 60%;
+            position: relative;
+        }
+        .floating-icons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 15px;
+        }
+        .floating-icons i {
+            font-size: 24px;
+            color: #4CAF50;
         }
         #services {
             background-color: #e0f2e9;
             padding: 40px;
             border-radius: 10px;
+        }
+        .signup-form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+        .signup-form input, .signup-form textarea, .signup-form button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -47,7 +74,7 @@
     <section class="hero fade-element">
         <h1>Empowering Students Through Peer-Led Tutoring</h1>
         <p>Built by high schoolers. Designed for everyone.</p>
-        <a href="#get-involved" class="cta-button">Sign Up Today</a>
+        <a href="#get-involved" class="cta-button">Join Us Today</a>
     </section>
 
     <section id="mission" class="content-section fade-element mission-section">
@@ -56,39 +83,24 @@
             <div class="mission-text">
                 <h2>Our Mission</h2>
                 <p>At EducAide S.D., we are dedicated to bridging educational gaps and providing students with the support they need to excel. Education should be a right, not a privilege, and we work tirelessly to ensure every student has access to quality learning resources and mentorship.</p>
-                <p>We believe that personalized tutoring fosters confidence, curiosity, and academic growth. Our mission is to create an inclusive and supportive learning environment where students are empowered to reach their full potential.</p>
-                <p>Through our student-led initiatives, we provide tailored tutoring programs that cater to different learning styles and needs. Beyond academics, we strive to instill a love for lifelong learning and critical thinking skills that students can carry forward into their futures.</p>
-                <p>Additionally, every dollar earned through our tutoring services goes directly to charitable organizations supporting education and underprivileged communities. By choosing EducAide S.D., you're not only investing in your education but also in a brighter future for others.</p>
+                <p>Through our student-led initiatives, we provide tailored tutoring programs that cater to different learning styles and needs. Every dollar earned through our tutoring services goes directly to charitable organizations supporting education and underprivileged communities.</p>
+                <div class="floating-icons">
+                    <i data-feather="book"></i>
+                    <i data-feather="pen-tool"></i>
+                    <i data-feather="clipboard"></i>
+                </div>
             </div>
         </div>
     </section>
-
-    <section id="services" class="content-section fade-element">
-        <h2><i data-feather="book-open"></i> Our Services</h2>
-        <div class="service-item"><i data-feather="user"></i> One-on-One Tutoring Sessions</div>
-        <div class="service-item"><i data-feather="edit"></i> Homework Assistance</div>
-        <div class="service-item"><i data-feather="file-text"></i> Test Prep Workshops</div>
-        <div class="service-item"><i data-feather="layers"></i> Study Resources and Guides</div>
-    </section>
     
-    <section id="about" class="content-section fade-element">
-        <h2>About Us</h2>
-        <p>EducAide S.D. is a student-led organization founded on the principle of academic support and community service. Our team consists of dedicated high school and college students who are passionate about making education more accessible and engaging for all.</p>
-        <p>Since our inception, we have helped countless students improve their grades, build confidence, and develop a deeper understanding of their coursework. Our approach goes beyond traditional tutoring—we foster mentorship and collaboration, ensuring that students feel supported throughout their learning journey.</p>
-        <p>We believe that education extends beyond the classroom, and that’s why we emphasize skill-building, critical thinking, and problem-solving techniques in our tutoring sessions. Whether it’s one-on-one mentoring, group study sessions, or comprehensive test preparation, we are here to guide students every step of the way.</p>
-        <p>At EducAide S.D., we also prioritize giving back. 100% of our proceeds are donated to charities that promote educational equity. By supporting us, you’re not just improving your own education—you’re helping countless other students gain access to opportunities they deserve.</p>
-    </section>
-    
-    <section class="testimonial content-section fade-element">
-        <blockquote>"EducAide S.D. has truly changed my approach to learning. The tutors are knowledgeable, friendly, and supportive!"</blockquote>
-        <p>- A Grateful Student</p>
-    </section>
-    
-    <section id="contact" class="content-section fade-element">
-        <h2>Contact Us</h2>
-        <p>Email: educaide.sd@gmail.com</p>
-        <p>Follow us on social media for updates!</p>
-        <p>Instagram: @educaide.sd</p>
+    <section id="signup" class="content-section fade-element">
+        <h2>Sign Up for Tutoring</h2>
+        <form class="signup-form" action="mailto:educaide.sd@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Tell us about the subject you need help with" required></textarea>
+            <button type="submit">Send</button>
+        </form>
     </section>
     
     <footer>
