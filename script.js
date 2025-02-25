@@ -9,6 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
             smoothScroll(targetId, 1000);
         });
     });
+    document.querySelector("#logo-link").addEventListener("click", function (event) {
+        event.preventDefault();
+        smoothScroll("#hero");
+    });
+
+    // Click event for Sign Up button to scroll to the contact section
+    document.querySelector("#signup-button").addEventListener("click", function (event) {
+        event.preventDefault();
+        smoothScroll("#contact");
+    });
 
     function smoothScroll(target, duration) {
         let startPosition = window.scrollY;
