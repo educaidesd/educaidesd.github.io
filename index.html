@@ -105,6 +105,46 @@
         window.addEventListener('scroll', fadeInElements);
         window.addEventListener('resize', fadeInElements);
         window.addEventListener('load', fadeInElements);
+        document.addEventListener("DOMContentLoaded", function () {
+            feather.replace();
+
+            function smoothScroll(target, duration) {
+                let startPosition = window.scrollY;
+                let targetPosition = target === "top" ? 0 : document.querySelector(target).offsetTop;
+                let distance = targetPosition - startPosition;
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    let timeElapsed = currentTime - startTime;
+
+                    let progress = timeElapsed / duration;
+                    let easedProgress = progress < 0.5 
+                        ? 4 * progress * progress * progress 
+                        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+                    window.scrollTo(0, startPosition + distance * easedProgress);
+
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(animation);
+                    } else {
+                        window.scrollTo(0, targetPosition);
+                    }
+                }
+
+                requestAnimationFrame(animation);
+            }
+
+            document.querySelector(".cta-button").addEventListener("click", function (e) {
+                e.preventDefault();
+                smoothScroll("#contact-sign-up", 1000);
+            });
+
+            document.querySelector(".logo img").addEventListener("click", function (e) {
+                e.preventDefault();
+                smoothScroll("top", 1000);
+            });
+        });
     </script>
 </body>
 </html>
