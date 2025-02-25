@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -7,37 +8,39 @@ body {
     text-align: center;
 }
 
-header {
+/* Navbar Styles */
+.navbar {
     background-color: #3e543e;
-    color: #ffffff;
-    padding: 15px 50px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Allows content to wrap on small screens */
 }
 
-#top {
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b5c7b5;
+}
+
+/* Hero Section */
+.hero-section {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: #f8f9fa;
 }
 
-#top h1 {
+.hero-content h1 {
     font-size: 3rem;
     color: #333;
 }
 
-#top p {
+.hero-content p {
     font-size: 1.25rem;
     color: #666;
 }
@@ -56,101 +59,18 @@ header {
     transform: scale(1.05);
 }
 
-.logo img {
-    height: 50px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #b5c7b5;
-}
-
-.hero {
-    padding: 120px 20px;
-    background-color: #6c8c6c;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-weight: 600;
-}
-
-.hero p {
-    font-size: 22px;
-    margin: 20px 0;
-}
-
-.content-section {
-    padding: 80px 50px;
+/* Mission Section */
+.mission-section {
+    padding: 60px 50px;
+    background-color: #fff;
     color: #3e543e;
-    background-color: #ffffff;
-}
-
-.service-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 10px 0;
-}
-
-.content-section img {
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial {
-    background-color: #e8f5e9;
-    padding: 60px;
-    margin: 40px 0;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial blockquote {
-    font-size: 20px;
-    font-style: italic;
-    color: #3e543e;
-}
-
-footer {
-    background-color: #3e543e;
-    color: white;
-    padding: 20px;
-    margin-top: 40px;
-    text-align: center;
-}
-
-.fade-element {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .mission-content {
     display: flex;
-    align-items: center;
     gap: 20px;
     justify-content: space-between;
-    text-align: left;
+    align-items: center;
 }
 
 .mission-image {
@@ -176,16 +96,41 @@ footer {
     color: #4CAF50;
 }
 
+/* Services Section */
 #services {
-    background-color: #e0f2e9;
     padding: 40px;
+    background-color: #e0f2e9;
     border-radius: 10px;
 }
 
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* Testimonials Section */
+.testimonial {
+    background-color: #e8f5e9;
+    padding: 60px;
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial blockquote {
+    font-size: 20px;
+    font-style: italic;
+    color: #3e543e;
+}
+
+/* Contact Section */
 .contact-signup {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     padding: 40px;
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -214,6 +159,16 @@ footer {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Footer */
+footer {
+    background-color: #3e543e;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
     .mission-content {
         flex-direction: column;
