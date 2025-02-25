@@ -107,14 +107,14 @@
         window.addEventListener('load', fadeInElements);
         document.addEventListener("DOMContentLoaded", function () {
 
-            function smoothScroll(target, duration) {
-                let startPosition = window.scrollY;
-                let targetPosition = target === "top" ? 0 : document.querySelector(target).offsetTop;
-                let distance = targetPosition - startPosition;
-                let startTime = null;
+        function smoothScroll(target, duration) {
+            let startPosition = window.scrollY;
+            let targetPosition = target === "top" ? 0 : document.querySelector(target).offsetTop;
+            let distance = targetPosition - startPosition;
+            let startTime = null;
 
-                function animation(currentTime) {
-                    if (startTime === null) startTime = currentTime;
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
                     let timeElapsed = currentTime - startTime;
 
                     let progress = timeElapsed / duration;
@@ -136,7 +136,7 @@
 
             document.querySelector(".cta-button").addEventListener("click", function (e) {
                 e.preventDefault();
-                smoothScroll("#contact-sign-up", 1000);
+                smoothScroll("#contact", 1000);
             });
 
             document.querySelector(".logo img").addEventListener("click", function (e) {
