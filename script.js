@@ -1,18 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     feather.replace();
 
-    // Smooth Scrolling for Navbar Links
-    document.querySelectorAll("nav ul li a").forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href");
-            smoothScroll(targetId, 1000);
-        });
-    });
-
+    // Smooth Scrolling Function
     function smoothScroll(target, duration) {
         let startPosition = window.scrollY;
-        let targetPosition = target === "top" ? 0 : document.querySelector(target).offsetTop - 50;
+        let targetElement = document.querySelector(target);
+        if (!targetElement) return;
+        let targetPosition = targetElement.offsetTop - 50;
         let distance = targetPosition - startPosition;
         let startTime = null;
 
@@ -35,6 +29,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
         requestAnimationFrame(animation);
     }
+
+    // Smooth Scrolling for Navbar Links
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            smoothScroll(this.getAttribute("href"), 1000);
+        });
+    });
+
+    // Smooth Scroll for Logo Click (Scroll to Hero Section)
+    document.querySelector(".logo img").addEventListener("click", function (e) {
+        e.preventDefault();
+        smoothScroll(".hero", 1000);
+    });
+
+    // Smooth Scroll for Sign Up Button (Scroll to Contact Section)
+    document.querySelector(".cta-button").addEventListener("click", function (e) {
+        e.preventDefault();
+        smoothScroll("#contact", 1000);
+    });
 
     // Fade-in Effect on Scroll
     function fadeInElements() {
