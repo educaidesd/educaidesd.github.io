@@ -4,6 +4,7 @@ html, body {
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll issues */
 }
+
 /* Ensure the hero section starts at the very top */
 .hero {
     height: 100vh; /* Full screen height */
@@ -12,11 +13,10 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 0px;
-    padding: 280px 20px;
-    background-color: #6c8c6c;
-    color: white;
+    padding: 0 20px;
+    margin: 0;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
