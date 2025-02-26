@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -8,8 +13,13 @@ body {
     text-align: center;
 }
 .hero {
-    margin-top: 80px;
-    padding: 120px 20px;
+    height: 100vh; /* Full screen height */
+    display: flex; /* Center content */
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Keep text centered */
+    padding: 0 20px;
     background-color: #6c8c6c;
     color: white;
 }
