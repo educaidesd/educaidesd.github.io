@@ -30,20 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         requestAnimationFrame(animation);
     }
 
-    // Smooth Scrolling for Navbar Links
-    document.querySelectorAll("nav ul li a").forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            smoothScroll(this.getAttribute("href"), 1000);
-        });
-    });
-
-    // Smooth Scroll for Logo Click (Scroll to Hero Section)
-    document.querySelector(".logo img").addEventListener("click", function (e) {
-        e.preventDefault();
-        smoothScroll(".hero", 1000);
-    });
-
     // Smooth Scroll for Sign Up Button (Scroll to Contact Section)
     document.querySelector(".cta-button").addEventListener("click", function (e) {
         e.preventDefault();
