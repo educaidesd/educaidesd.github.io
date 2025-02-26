@@ -7,41 +7,6 @@ body {
     color: #3e543e;
     text-align: center;
 }
-header {
-    background-color: #3e543e;
-    color: #ffffff;
-    padding: 15px 50px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-.logo img {
-    height: 50px;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-nav ul li {
-    display: inline;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-nav ul li a:hover {
-    color: #b5c7b5;
-}
 .hero {
     margin-top: 80px;
     padding: 120px 20px;
